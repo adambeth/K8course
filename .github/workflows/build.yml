@@ -1,0 +1,10 @@
+name: build and deploy dockers
+on: push
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+      - uses: actions/checkout@v1
+        run: docker build -f Dockerfile.dev .
