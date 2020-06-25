@@ -13,3 +13,5 @@ jobs:
         run: ls -a
       - name: build_docker
         run: docker build -t herrowpreeze/docker-react -f Dockerfile.dev .
+      - name: start docker
+        run: docker run herrowpreeze/docker-react npm run test -- --coverage
