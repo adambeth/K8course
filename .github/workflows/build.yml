@@ -12,4 +12,4 @@ jobs:
       - name: check list
         run: ls -a
       - name: build_docker
-        run: docker build -f Dockerfile.dev .
+        run: docker build -t adambeth/docker-react -f Dockerfile.dev .
