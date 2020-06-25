@@ -9,5 +9,7 @@ jobs:
         run: docker -v
       - name: checkout
         uses: actions/checkout@v1
+      - name: check list
+        run: ls -a
       - name: build_docker
         run: docker build -f Dockerfile.dev .
