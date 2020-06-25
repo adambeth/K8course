@@ -5,6 +5,9 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     steps:
+      - name: is_docker
+        run: docker -v
       - name: checkout
         uses: actions/checkout@v1
+      - name: build_docker
         run: docker build -f Dockerfile.dev .
